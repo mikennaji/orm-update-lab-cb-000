@@ -17,7 +17,7 @@ def  self.create_table
         CREATE TABLE students(
           name TEXT,
           grade INT,
-          id PRIMARY KEY INTEGER
+          id PRIMARY KEY INT
         );
         SQL
   DB[:conn].execute(sql)

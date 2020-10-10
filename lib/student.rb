@@ -75,9 +75,9 @@ def self.find_by_name(name)
   row =  DB[:conn].execute(sql,name)
   row.each do |instance|
    student =   Student.new_from_db(instance)
-  end.first 
+  end.first
   student
-  
+
 end
 
 end

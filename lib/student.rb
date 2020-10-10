@@ -63,5 +63,10 @@ def update
   DB[:conn].execute(sql,self.name,self.grade,self.id)
 end
 
+def self.new_from_db(row)
+  student = Student.create(row[0],row[1],row[2])
 
 end
+
+end
+

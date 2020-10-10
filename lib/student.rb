@@ -38,6 +38,9 @@ def self.drop_table
 end
 
 def self.save
+  if self.id 
+    self.update
+  else 
   sql = <<-SQL
         INSERT INTO students(age,grade) VALUES (?,?)
         SQL

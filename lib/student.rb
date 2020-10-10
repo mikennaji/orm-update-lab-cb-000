@@ -71,12 +71,10 @@ end
 
 def self.find_by_name(name)
   sql= <<-SQL
-    SELECT id,name,grade FROM students WHERE name = ?
+    SELECT * FROM students WHERE name = ? LIMIT 1
     SQL
-  row =  DB[:conn].execute(sql,name)
-  row.each do |instance|
-   student = self.new_from_db(instance)
-   student
+  DB[:conn].execute(sql,name).map do |instance|
+   self.new_from_db(instance)
   end.first
 
 

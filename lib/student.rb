@@ -37,13 +37,18 @@ def self.drop_table
 
 end
 
-def self.create
+def self.save
   sql = <<-SQL
         INSERT INTO students(age,grade) VALUES (?,?)
         SQL
   DB[:conn].execute(sql,age,grade)
 end
 
+
+def self.create (name,age)
+  student = Student.new(name,age)
+
+end
 end
 
 

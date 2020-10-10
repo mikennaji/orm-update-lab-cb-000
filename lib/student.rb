@@ -49,10 +49,10 @@ def self.create (name,age)
   student = Student.new(name,age)
 
 end
-end
-
-
-
-
 
 end
+
+
+
+
+

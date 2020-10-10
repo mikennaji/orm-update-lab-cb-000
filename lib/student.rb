@@ -64,6 +64,7 @@ def update
 end
 
 def self.new_from_db(row)
+  new_student = self.new
   student = Student.new(row[0],row[1],row[2])
 
 end
@@ -74,7 +75,7 @@ def self.find_by_name(name)
     SQL
   row =  DB[:conn].execute(sql,name)
   row.each do |instance|
-   student = Student.new_from_db(instance)
+   student = self.new_from_db(instance)
    student
   end.first
 

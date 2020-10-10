@@ -18,7 +18,7 @@ def  self.create_table
           name TEXT,
           grade INTEGER,
           id PRIMARY KEY INTEGER
-        )
+        );
         SQL
   DB[:conn].execute(sql)
 

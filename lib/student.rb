@@ -15,9 +15,9 @@ end
 def  self.create_table
   sql = <<-SQL
         CREATE TABLE students(
-          NAME TEXT
-          GRADE INTEGER
-          ID PRIMARY KEY INTEGER
+          name TEXT
+          grade INTEGER
+          id PRIMARY KEY INTEGER
         )
         SQL
   db[:conn].execute(sql)

@@ -13,7 +13,7 @@ end
 
 
 def  self.create_table
-  sql = <<--SQL
+  sql = <<-SQL
         CREATE TABLE students(
           name TEXT
           grade INTEGER

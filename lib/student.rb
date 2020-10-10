@@ -37,7 +37,7 @@ def self.drop_table
 
 end
 
-def self.save
+def save
   if self.id
     self.update
   else

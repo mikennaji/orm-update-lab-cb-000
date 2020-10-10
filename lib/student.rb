@@ -47,6 +47,7 @@ end
 
 def self.create (name,age)
   student = Student.new(name,age)
+  student.save
 
 end
 

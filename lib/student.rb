@@ -20,7 +20,7 @@ def  self.create_table
           id PRIMARY KEY INTEGER
         )
         SQL
-  db[:conn].execute(sql)
+  DB[:conn].execute(sql)
 
 
   # Remember, you can access your database connection anywhere in this class

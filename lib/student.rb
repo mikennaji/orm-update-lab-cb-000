@@ -72,8 +72,12 @@ def self.find_by_name(name)
   sql= <<-SQL
     SELECT id,name,grade FROM students WHERE name = ?
     SQL
-  DB[:conn].execute(sql,name)
-
+  row =  DB[:conn].execute(sql,name)
+  row.each do |instance|
+   student =   Student.new_from_db(instance)
+  end.first 
+  student
+  
 end
 
 end

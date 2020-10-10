@@ -16,7 +16,7 @@ def  self.create_table
   sql = <<-SQL
         CREATE TABLE students(
           name TEXT,
-          grade INTEGER,
+          grade INT,
           id PRIMARY KEY INTEGER
         );
         SQL

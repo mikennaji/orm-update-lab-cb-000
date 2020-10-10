@@ -51,8 +51,3 @@ def self.create (name,age)
 end
 
 end
-
-
-
-
-

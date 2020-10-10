@@ -70,7 +70,7 @@ end
 
 def self.find_by_name(name)
   sql= <<-SQL
-    SELECT * FROM students WHERE name = ?
+    SELECT name,age,id FROM students WHERE name = ?
     SQL
   DB[:conn].execute(sql,name)
 

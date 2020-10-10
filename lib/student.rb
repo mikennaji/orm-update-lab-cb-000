@@ -37,4 +37,17 @@ def self.drop_table
 
 end
 
+def self.create
+  sql = <<-SQL
+        INSERT INTO students(age,grade) VALUES (?,?)
+        SQL 
+  DB[:conn].execute(sql,age,grade)
+end
+
+end
+
+
+
+
+
 end

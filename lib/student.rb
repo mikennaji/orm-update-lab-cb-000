@@ -50,8 +50,8 @@ end
 end
 
 
-def self.create (name,age)
-  student = Student.new(name,age)
+def self.create (name,grade)
+  student = Student.new(name,grade)
   student.save
 
 end
